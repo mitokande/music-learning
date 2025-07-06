@@ -33,6 +33,7 @@ function drawStaff() {
         ctx.lineTo(staff.x + staff.width, y);
         ctx.stroke();
     }
+    drawClef();
 }
 
 function drawNote(note) {
@@ -59,6 +60,14 @@ function drawNote(note) {
             ctx.stroke();
         }
     }
+}
+
+function drawClef() {
+    ctx.font = `${staff.lineSpacing * 3}px serif`;
+    ctx.textBaseline = 'middle';
+    const x = staff.x - staff.lineSpacing * 1.5;
+    const y = staff.y + staff.lineSpacing * 2;
+    ctx.fillText('\uD834\uDD1E', x, y);
 }
 
 function getRandomNote() {
