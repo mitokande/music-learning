@@ -14,5 +14,5 @@ jobs:
           user: ${{ secrets.SERVER_USER }}
           pass: ${{ secrets.SERVER_PASS }}
           run: |
-            cd /home/automatewithai/public_html/music
+            cd /home/automatewithai/public_html/music/music-learning
             git pull
